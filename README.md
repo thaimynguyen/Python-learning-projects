@@ -9,4 +9,6 @@ The game follows 2 rules:
 1. Only one disk can be moved at a time.
 2. No disk may be placed on top of a smaller disk.
 
-**run *script.py* file to play the game**
+
+
+**Run *script.py* file to play the game**
