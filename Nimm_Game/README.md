@@ -11,22 +11,22 @@ Nimm is an ancient game of strategy that is named after the old German word for 
 
 ## Here's a sample execution:
 
-There are 20 stones left
+>>> There are 20 stones left
 
-Player 1 would you like to remove 1 or 2 stones? 2
+>>> Player 1 would you like to remove 1 or 2 stones? 2
 
-There are 18 stones left
+>> There are 18 stones left
 
-Player 2 would you like to remove 1 or 2 stones? 2
+>>> Player 2 would you like to remove 1 or 2 stones? 2
 
 etc...
 
-There are 2 stones left
+>>> There are 2 stones left
 
-Player 1 would you like to remove 1 or 2 stones? 1
+>>> Player 1 would you like to remove 1 or 2 stones? 1
 
-There are 1 stones left
+>>> There are 1 stones left
 
-Player 2 would you like to remove 1 or 2 stones? 1
+>>> Player 2 would you like to remove 1 or 2 stones? 1
 
-Player 1 wins!
+>> Player 1 wins!
