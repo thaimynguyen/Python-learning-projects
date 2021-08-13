@@ -3,11 +3,13 @@
 Nimm is an ancient game of strategy that is named after the old German word for "take." It is also called Tiouk Tiouk in West Africa and Tsynshidzi in China.
 
 ### How to play: 
-- The game starts with a pile of 20 stones between the players.
-- The two players alternate turns taking stones until there are zero left.
-- On a given turn, a player may take either 1 or 2 stone from the center pile.
-- The two players continue until the center pile has run out of stones.
-- The last player to take a stone loses.
+- There can be more than 2 players
+- Players alternate taking stones until there are zero left.
+- The game starts with a pile of n stones between the players.
+- On a given turn, a player may take either 1 or 2 stone from the pile.
+- Players continue until the pile has run out of stones.
+- The player to take the last stone wins.
+
 
 ## Here's a sample execution:
 
