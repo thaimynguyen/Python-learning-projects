@@ -1,45 +1,51 @@
-def print_stone_count(current_count: int):
-    print(f'There are {current_count} stones left. \n')
-
-def print_input_prompt(player: int):
-    if player == 1:
-        input_prompt = 'Player 1 would you like to remove 1 or 2 stones?\n'
-    if player == -1:
-        input_prompt = 'Player 2 would you like to remove 1 or 2 stones?\n'
-    return input_prompt
-
-def play_each_turn(player: int):
-        while True:
-            no_of_stones_to_remove = int(input(print_input_prompt(player)))
-            if no_of_stones_to_remove in [1, 2]:
-                break
-            print('Invalid input. Please type 1 or 2.')
-        return no_of_stones_to_remove
-
-def print_winner(player: int):
-    if player == 1:
-        print('Player 1 wins!\n')
-    if player == -1:
-        print('Player 2 wins!\n')
-    
 def main():
-    current_stone_count = 20
-    winner = None
+    current_count = set_total_stone()
+    total_players = set_total_players()
     player = 1
 
-    while not winner:
-        print_stone_count(current_stone_count)
-        current_stone_count -= play_each_turn(player)
-        player *= -1
-
-        if current_stone_count < 1:
-            winner = player
+    while current_count > 0:
+        print(f'\nThere are {current_count} stones left.')
+        move = play_each_turn(player)
+        current_count -= move
+        if current_count < 1:
             break
-    
-    print_winner(winner)
+        player = (player%total_players) + 1
+
+    print(f'Player {player} wins!\n')
+
+
+def set_total_stone():
+    while True:
+        try:
+            total_count = int(input('\nSet the total number of stones: '))
+            return total_count
+        except ValueError:
+            print("No valid integer! Please try again...")
+
+
+def set_total_players():
+    while True:
+        try:
+            total_players = int(input('\nHow many players? '))
+            return total_players
+        except ValueError:
+            print("No valid integer! Please try again...")
+
+
+def play_each_turn(player: int):
+    while True:
+        input_prompt = f'\n Player {player}, would you like to remove 1 or 2 stones? '
+        try:
+            move = int(input(input_prompt))
+            if move == 1 or move == 2:
+                return(move)
+            else:
+                print('You can only remove 1 or 2 stones.')
+        except ValueError:
+            print(f'Invalid input. Please type 1 or 2.')
+
 
 if __name__ == "__main__":
     main()
-
 
 
