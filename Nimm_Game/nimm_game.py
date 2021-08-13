@@ -1,5 +1,5 @@
 def main():
-    current_count = set_total_stone()
+    current_count = set_total_stones()
     total_players = set_total_players()
     player = 1
 
@@ -14,7 +14,7 @@ def main():
     print(f'Player {player} wins!\n')
 
 
-def set_total_stone():
+def set_total_stones():
     while True:
         try:
             total_count = int(input('\nSet the total number of stones: '))
